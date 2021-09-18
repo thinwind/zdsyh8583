@@ -266,62 +266,62 @@ field48:
       tag: AA
       title: 'Acquirer Addtional information'
       zh: '受理方附加交易信息'
-      def: ans
+      type: ans
     -
       tag: BC
       title: 'Black Card Information'
       zh: '涉嫌卡信息'
-      def: ans
+      type: ans
     -
       tag: NK
       title: 'New Key'
       zh: '新秘钥'
-      def: bit
+      type: bit
     -
       tag: IN
       title: 'CUPSecure information'
       zh: 'CUPSecure认证信息'
-      def: ans
+      type: ans
     -
       tag: PB
       title: 'PB'
       zh: '基于 UICS 借贷记标准的电子现金应用的非指定账户圈存信息'
-      def: n
+      type: n
     -
       tag: IP
       title: 'Installment Payment Information'
       zh: '分期付款信息'
-      def: ans
+      type: ans
     -
       tag: RA
       title: 'RA'
       zh: '折扣消费交易中的刷卡金额'
-      def: n
+      type: n
     - 
       tag: RP
       title: 'Reward Points Redemption'
       zh: '积分兑换信息'
-      def: ans
+      type: ans
     -
       tag: PZ
       title: 'PZ'
       zh: '委托类业务信息'
-      def: ans
+      type: ans
     -
       tag: CB
       title: 'CB'
       zh: '境外营销返现标识'
-      def: ans
+      type: ans
     -
       tag: AS
       title: 'AS'
       zh: '组合用法'
-      def: TLV
+      tlv: 2-3-x
       subfields:
         -
           tag: AA
           zh: '银联卡跨境交易补充信息'
-          def: an
+          type: an
         -
           ref: IN
         -
@@ -339,43 +339,43 @@ field48:
         -
           tag: AO
           zh: '关联业务类型'
-          def: an
+          type: an
         -
           tag: AI
           zh: '自助交易终端机具信息'
-          def: ans
+          type: ans
         -
           tag: ON
           zh: '订单号信息'
-          def: ans
+          type: ans
         -
           tag: SI
           zh: '代授权附加信息'
-          def: ans
+          type: ans
         -
           tag: IA
           zh: '转入卡所属地区信息'
-          def: an
+          type: an
         -
           tag: MT
           zh: '业务产品标识'
-          def: n
+          type: n
         -
           tag: UP
           zh: '银联附加信息'
-          def: ans
+          type: ans
         -
           tag: CS
           zh: '取卡信息'
-          def: ans
+          type: ans
         -
           tag: OA
           zh: '退货原始交易金额'
-          def: n
+          type: n
         -
           tag: BM
           zh: '业务产品位图'
-          def: bit
+          type: bit
   rejcde:
     illegalLen: 10483
     overLen: 10484
@@ -427,5 +427,63 @@ field55:
   title: 'Integrated Circuit Card (ICC) System Related Data'
   zh: '基于UICS借贷记标准的IC卡数据域'
   def: ansb...255(LLLVAR)
+  tlv: cus-55
+  subfields:
+    -
+      title: 'Application Cryptogram'
+      abbr: 'AC'
+      zh: '应用密文'
+      tag: 9F26
+      type: b
+      vallen: 8
+    -
+      title: 'Cryptogram Information - Data'
+      zh: '密文信息数据'
+      tag: '9F27'
+      type: b
+      vallen: 1
+    -
+      title: 'Issuer Application Data'
+      abbr: 'IAD'
+      zh: '发卡行应用数据'
+      tag: '9F10'
+      type: b
+      vallen: [0,32]
+    -
+      title: 'Unpredictable Number'
+      zh: '不可预知数'
+      tag: '9F37'
+      type: b
+      vallen: 4
+    -
+      title: 'Application Transaction Counter'
+      abbr: 'ATC'
+      zh: '应用交易计数器'
+      tag: '9F36'
+      type: b
+      vallen: 2
+    -
+      title: 'Terminal Verification Result'
+      abbr: 'TVR'
+      zh: '终端验证结果'
+      tag: '95'
+      type: b
+      vallen: 5
+    -
+      title: 'Transaction Date'
+      zh: '交易日期'
+      tag: '9A'
+      type: cn
+      vallen: 3
+    -
+      title: 'Transaction Type'
+      zh: '交易类型'
+      tag: '9C'
+      type: cn
+      vallen: 1
+    -
+      
+      
+    
   rejcde:
     illegalVal: 
