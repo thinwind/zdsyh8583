@@ -227,7 +227,7 @@ field42:
   title: 'Card Acceptor Identification Code'
   zh: '受卡方标识码'
   def: ans15
-  fill: '0'
+  filling: '0'
   rejcde:
     illegalVal: 10425
 
@@ -263,57 +263,57 @@ field48:
   composite: true
   usecases:
     -
-      tag: AA
+      id: AA
       title: 'Acquirer Addtional information'
       zh: '受理方附加交易信息'
       type: ans
     -
-      tag: BC
+      id: BC
       title: 'Black Card Information'
       zh: '涉嫌卡信息'
       type: ans
     -
-      tag: NK
+      id: NK
       title: 'New Key'
       zh: '新秘钥'
       type: bit
     -
-      tag: IN
+      id: IN
       title: 'CUPSecure information'
       zh: 'CUPSecure认证信息'
       type: ans
     -
-      tag: PB
+      id: PB
       title: 'PB'
       zh: '基于 UICS 借贷记标准的电子现金应用的非指定账户圈存信息'
       type: n
     -
-      tag: IP
+      id: IP
       title: 'Installment Payment Information'
       zh: '分期付款信息'
       type: ans
     -
-      tag: RA
+      id: RA
       title: 'RA'
       zh: '折扣消费交易中的刷卡金额'
-      type: n
+      type: 'n'
     - 
-      tag: RP
+      id: RP
       title: 'Reward Points Redemption'
       zh: '积分兑换信息'
       type: ans
     -
-      tag: PZ
+      id: PZ
       title: 'PZ'
       zh: '委托类业务信息'
       type: ans
     -
-      tag: CB
+      id: CB
       title: 'CB'
       zh: '境外营销返现标识'
       type: ans
     -
-      tag: AS
+      id: AS
       title: 'AS'
       zh: '组合用法'
       tlv: 2-3-x
@@ -345,7 +345,7 @@ field48:
           zh: '自助交易终端机具信息'
           type: ans
         -
-          tag: ON
+          tag: 'ON'
           zh: '订单号信息'
           type: ans
         -
@@ -359,7 +359,7 @@ field48:
         -
           tag: MT
           zh: '业务产品标识'
-          type: n
+          type: 'n'
         -
           tag: UP
           zh: '银联附加信息'
@@ -371,7 +371,7 @@ field48:
         -
           tag: OA
           zh: '退货原始交易金额'
-          type: n
+          type: 'n'
         -
           tag: BM
           zh: '业务产品位图'
@@ -482,8 +482,433 @@ field55:
       type: cn
       vallen: 1
     -
+      title: 'Transaction Amount or Amount Authorized'
+      zh: '授权金额'
+      tag: '9F02'
+      type: cn
+      vallen: 6
+    -
+      title: 'Transaction Currency Code'
+      zh: '交易货币代码'
+      tag: '5F2A'
+      type: cn
+      vallen: 2
+    -
+      title: 'Application Interchange Profile'
+      zh: '应用交互特征'
+      tag: '82'
+      type: b
+      vallen: 2
+    -
+      title: 'Terminal Country Code'
+      zh: '终端国家代码'
+      tag: '9F1A'
+      type: cn
+      vallen: 6
+    -
+      title: 'Amount Other'
+      zh: '其它金额'
+      tag: '9F03'
+      type: cn
+      vallen: '9F03'
+    -
+      title: 'Terminal Capabilities'
+      zh: '终端性能'
+      tag: '9F33'
+      type: b
+      vallen: 3
+    -
+      title: 'Cardholder Verfication Method Results'
+      abbr: 'CVMR'
+      zh: '持卡人验证方法结果'
+      tag: '9F34'
+      type: b
+      vallen: 3
+    -
+      title: 'Terminal Type'
+      zh: '终端类型'
+      tag: '9F35'
+      type: cn
+      vallen: 1
+    -
+      title: 'Interface Device Serial Number'
+      abbr: 'IFD'
+      zh: '接口设备序列号'
+      tag: '9F1E'
+      type: 'an'
+      vallen: 8
+    -
+      title: 'Dedicated File Name'
+      abbr: 'DF'
+      zh: '专用文件名称'
+      tag: '84'
+      type: b
+      vallen: [5,16]
+    -
+      title: 'Terminal Application Version Number'
+      zh: '应用版本号'
+      tag: '9F09'
+      type: b
+      vallen: 2
+    -
+      title: 'Transaction Sequence Counter'
+      zh: '交易序列计数器'
+      tag: '9F41'
+      type: cn
+      vallen: [2,4]
+    -
+      title: 'Issuer Authentication Data'
+      zh: '发卡行认证数据'
+      tag: '91'
+      type: b
+      vallen: [8,16]
+    -
+      title: 'Issuer Script Template 1'
+      zh: '发卡行脚本1'
+      tag: '71'
+      type: b
+      vallen: [1,128]
+    -
+      title: 'Issuer Script Template 2'
+      zh: '发卡行脚本2'
+      tag: '72'
+      type: b
+      vallen: [1,128]
+    -
+      title: 'Issuer Script Results'
+      zh: '发卡方脚本结果'
+      tag: 'DF31'
+      type: b
+      vallen: [5,21]
+    -
+      title: 'ECI Issuer Authorization Code'
+      abbr: 'EC IAC'
+      zh: '电子现金发卡行授权码'
+      tag: '9F74'
+      type: an
+      vallen: 6
+    -
+      title: 'Card Product Idatification Code'
+      zh: '卡产品标识信息'
+      tag: '9F63'
+      type: b
+      vallen: 16
+    -
+      title: 'Authoriztion Response Code'
+      zh: '授权响应码'
+      tag: '8A'
+      type: an
+      vallen: 2
       
-      
-    
   rejcde:
-    illegalVal: 
+    illegalLen: 10553
+    overlen: 10554
+    illegalVal: 10555
+
+field56:
+  title: 'Additional Data'
+  zh: '附加数据'
+  def: ansb...512(LLLVAR)
+  tlv: 2-3-x
+  usecases:
+    -
+      id: 'PR'
+      title: 'Payment Account Reference'
+      zh: 'PAR信息'
+      subfields:
+        -
+          title: 'PAR'
+          tag: '01'
+          type: an29
+      
+  rejcde:
+    illegalLen: 10563
+    overlen: 10564
+    illegalVal: 10565
+
+field57:
+  title: 'Additional Data Private'
+  zh: '附加交易信息'
+  def: ans...100(LLLVAR)
+  usecases:
+    -
+      id: AB
+      title: 'Addvalue Bussiness'
+      zh: '公共支付业务信息'
+      type: an
+      sequence: 
+        -
+          len: 20
+          type: an
+          desc: '发卡方附加交易信息'
+        -
+          len: 20
+          type: an
+          desc: 'CUPS 附加交易信息'
+        - 
+          len: 56
+          type: an
+          desc: '保留使用'
+    -
+      id: IP
+      title: 'Installment Payment information'
+      zh: '分期付款信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: as
+          desc: '用法标志'
+        -
+          len: 12
+          type: 'n'
+          desc: '首期还款金额'
+        -
+          len: 3
+          type: 'n'
+          desc: '还款币种'
+        -
+          len: 12
+          type: 'n'
+          desc: '持卡人分期付款手续费'
+        -
+          len: 6
+          type: 'n'
+          desc: '保留使用'
+        -
+          len: 50
+          type: ans
+          desc: '分期付款特征数据'
+          sequence: 
+            -
+              len: 12
+              type: 'n'
+              desc: '奖励积分'
+            - 
+              len: 1
+              type: an
+              desc: '手续费支付方式'
+            -
+              len: 12
+              type: 'n'
+              desc: '首期手续费'
+            -
+              len: 12
+              type: 'ans'
+              desc: '每期手续费'
+            -
+              len: 13
+              type: 'ans'
+              desc: '保留使用'
+              filling: ' '
+    -
+      id: CI
+      title: 'Cardholder Information'
+      zh: '持卡人身份信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: as
+          desc: '用法标志'
+        -
+          len: 20
+          type: ans
+          desc: '姓名'
+        -
+          len: 2
+          type: 'n'
+          desc: '证件类别'
+        -
+          len: 20
+          type: 'ans'
+          desc: '证件编号'
+        - 
+          len: 54
+          type: raw
+          desc: '其它信息'
+    -
+      id: RP
+      title: 'Reward Points Redemption'
+      zh: '积分兑换信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: an
+          desc: '用法标志'
+        -
+          len: 10
+          type: 'n'
+          desc: '兑换积分分数'
+        -
+          len: 12
+          type: 'n'
+          desc: '自付金金额'
+        - 
+          len: 50
+          type: 'ans'
+          desc: '保留使用'
+    -
+      id: AS
+      title: 'AS'
+      zh: '组合用法'
+      tlv: 2-3-x
+      subfields:
+        -
+          ref: AB
+        -
+          ref: IP
+        -
+          ref: CI
+        -
+          ref: RP
+        -
+          tag: RA
+          zh: '原始请求金额'
+          type: 'n'
+        -
+          tag: NA
+          zh: '下次可充值金额'
+          type: 'n'
+        -
+          tag: IA
+          zh: '转入卡所属地区'
+          type: 'n'
+        -
+          tag: SE
+          zh: '无卡自助消费业务开通信息'
+          type: 'ans'
+          sequence:
+            -
+              len: 1
+              type: 'n'
+              desc: '无卡自助消费业务开通状态'
+            -
+              len: 2
+              type: 'n'
+              desc: '开通业务类型'
+            -
+              len: 20
+              type: 'ans'
+              desc: '持卡人手机号'
+        -
+          tag: AR
+          zh: '附加应答信息'
+          type: 'an'
+          sequence:
+            -
+              len: 1
+              type: 'an'
+              desc: '应答码发起方'
+            -
+              len: 2
+              type: 'an'
+              desc: '附加应答信息取值'
+        -
+          tag: ID
+          zh: '电子账户产品保留使用'
+      
+  rejcde:
+    illegalLen: 10573
+    overlen: 10574
+    illegalVal: 10575
+
+field59:
+  title: 'Detail Inquiring'
+  zh: '明细查询数据'
+  def: ans...600(LLLVAR)
+  usecases:
+    -
+      ID: QL
+      title: 'Query Latest'
+      zh: '最近十笔明细查询请求信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: an
+          desc: '格式符'
+        -
+          len: 3
+          type: 'n'
+          desc: '当前明细顺序号'
+    -
+      ID: QD
+      title: 'Query Date'
+      zh: '按日期查询请求信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: an
+          desc: '格式符'
+        -
+          len: 3
+          type: 'n'
+          desc: '当前明细顺序号'
+        -
+          len: 8
+          type: 'n'
+          desc: '明细起始日期'
+        -
+          len: 8
+          type: 'n'
+          desc: '明细终止日期'
+    -
+      ID: QR
+      title: 'Query Result'
+      zh: '明细查询结果信息'
+      type: ans
+      sequence:
+        -
+          len: 2
+          type: an
+          desc: '格式符'
+        -
+          len: 3
+          type: 'an'
+          desc: '卡账户货币代码'
+        -
+          len: 3
+          type: 'n'
+          desc: '所有满足查询条件的记录数'
+        -
+          len: x
+          type: '[]'
+          element:
+            -
+              len: 3
+              type: 'n'
+              title: 'SEQUENCE-NUMBER'
+              desc: '明细顺序号'
+            -
+              len: 8
+              type: 'n'
+              title: 'TRANSACTION-DATE'
+              desc: '交易日期'
+            -
+              len: 3
+              type: an
+              title: 'CURRENCY-CODE, TRANSACTION'
+              desc: '交易货币代码'
+            -
+              len: 13
+              type: Xn
+              title: 'TRANSACTION-AMOUNT'
+              desc: '交易金额'
+            -
+              len: 13
+              type: Xn
+              title: 'BALANCE-AMOUNT'
+              desc: '余额'
+            -
+              len: 10
+              type: ans
+              title: 'MEMO-CODE'
+              desc: '备注代码'
+          
+  rejcde:
+    illegalLen: 10593
+    overlen: 10594
+    illegalVal: 10595
