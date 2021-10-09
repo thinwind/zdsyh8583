@@ -136,7 +136,7 @@ field16:
   def: n4
 
 field18:
-  title: 'Merchant's Type (MCC)'
+  title: "Merchant's Type (MCC)"
   zh: '商户类型'
   def: n4
 
@@ -912,3 +912,100 @@ field59:
     illegalLen: 10593
     overlen: 10594
     illegalVal: 10595
+
+field60:
+  title: 'Reserved'
+  zh: '自定义域'
+  def: ans...100(LLLVAR)
+  sequence: 
+    -
+      len: 4
+      type: 'n'
+      title: 'Message Reason Code'
+      desc: '报文原因码'
+    -
+      len: 11
+      type: 'ans'
+      title: 'Additional Point Of Service Information'
+      desc: '服务点附加信息'
+      sequence:
+        -
+          len: 1
+          desc: '账户所有人类型'
+        -
+          len: 1
+          desc: '终端读取能力'
+        -
+          len: 1
+          desc: 'IC 卡条件代码'
+        -
+          len: 1
+          desc: '保留使用'
+        -
+          len: 2
+          desc: '终端类型'
+        -
+          len: 1
+          desc: '受理免验密码标志'
+        -
+          len: 1
+          desc: 'IC 卡验证可靠性标志'
+        -
+          len: 2
+          desc: '电子商务标志'
+        -
+          len: 1
+          desc: '交互方式标志'
+    -
+      len: 15
+      type: ans
+      title: 'Additional Transaction Information'
+      desc: '交易发生附加信息'
+      sequence:
+        -
+          len: 2
+          desc: '特殊计费类型'
+        -
+          len: 1
+          desc: '特殊计费档次'
+        -
+          len: 3
+          desc: '保留使用(第 3 位为 MAC 算法标识)'
+        -
+          len: 1
+          desc: '支持部分承兑和返回余额标志'
+        -
+          len: 1
+          desc: '交易发起方式'
+        -
+          len: 1
+          desc: '交易介质'
+        -
+          len: 1
+          desc: 'IC 卡的应用类型'
+        -
+          len: 2
+          desc: '账户结算类型'
+        -
+          len: 1
+          desc: '卡账户等级'
+        -
+          len: 2
+          desc: '卡产品'
+    -
+      len: x
+      type: ans
+      desc: '保留使用'
+          
+  rejcde:
+    illegalLen: 10603
+    overlen: 10604
+    illegalVal: 10605
+    
+field65:
+  title: ''
+  zh: ''
+  def: ()
+  rejcde:
+    illegalVal: 
+
