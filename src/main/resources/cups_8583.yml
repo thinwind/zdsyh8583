@@ -602,7 +602,7 @@ field55:
       
   rejcde:
     illegalLen: 10553
-    overlen: 10554
+    overLen: 10554
     illegalVal: 10555
 
 field56:
@@ -623,7 +623,7 @@ field56:
       
   rejcde:
     illegalLen: 10563
-    overlen: 10564
+    overLen: 10564
     illegalVal: 10565
 
 field57:
@@ -811,7 +811,7 @@ field57:
       
   rejcde:
     illegalLen: 10573
-    overlen: 10574
+    overLen: 10574
     illegalVal: 10575
 
 field59:
@@ -820,7 +820,7 @@ field59:
   def: ans...600(LLLVAR)
   usecases:
     -
-      ID: QL
+      id: QL
       title: 'Query Latest'
       zh: '最近十笔明细查询请求信息'
       type: ans
@@ -834,7 +834,7 @@ field59:
           type: 'n'
           desc: '当前明细顺序号'
     -
-      ID: QD
+      id: QD
       title: 'Query Date'
       zh: '按日期查询请求信息'
       type: ans
@@ -856,7 +856,7 @@ field59:
           type: 'n'
           desc: '明细终止日期'
     -
-      ID: QR
+      id: QR
       title: 'Query Result'
       zh: '明细查询结果信息'
       type: ans
@@ -910,7 +910,7 @@ field59:
           
   rejcde:
     illegalLen: 10593
-    overlen: 10594
+    overLen: 10594
     illegalVal: 10595
 
 field60:
@@ -999,13 +999,126 @@ field60:
           
   rejcde:
     illegalLen: 10603
-    overlen: 10604
+    overLen: 10604
     illegalVal: 10605
     
-field65:
-  title: ''
-  zh: ''
-  def: ()
+field61:
+  title: 'Cardholder Authentication Information'
+  zh: '持卡人身份认证信息'
+  def: ans...200(LLLVAR)
+  sequence:
+    -
+      len: 22
+      desc: '证件编号'
+    -
+      len: 1
+      desc: 'CVV检验结果'
+    -
+      len: 1
+      desc: 'PVV校验结果'
+    -
+      len: 7
+      desc: '无卡校验值'
+    -
+      len: 1
+      desc: 'ARQC认证结果值'
+    -
+      len: x
+      desc: '安全信息校验值'
+      
+  rejcde:
+    illegalLen: 10613
+    overLen: 10614
+
+field62:
+  title: 'Switching Data'
+  zh: '交换中心数据'
+  def: ans...200(LLLVAR)
+  usecases:
+    -
+      id: IO
+      title: 'information from International Orgnization'
+      zh: '国际信用卡公司报文信息'
+      sequence:
+        -
+          len: 2
+          desc: '格式符'
+        -
+          len: 3
+          desc: 'FirstTag'
+        -
+          len: 3
+          desc: '国际信用卡公司/外资银行标志'
+          tag: 'T00'
+        -
+          len: 10
+          tag: 'T07'
+          desc: '交易日期时间'
+          type: 'n'
+        -
+          len: 6
+          tag: 'T11'
+          desc: '系统跟踪号码'
+          type: 'n'
+        -
+          len: 4
+          tag: 'T18'
+          desc: '商户类型'
+          type: 'n'
+        -
+          len: 11
+          tag: 'T32'
+          desc: '受理机构代码'
+        -
+          len: 11
+          tag: 'T33'
+          desc: '发送机构标识码'
+        -
+          len: 2
+          tag: 'T39'
+          desc: '响应码'
+          type: 'an'
+        -
+          len: 12
+          tag: 'T37'
+          desc: '检索参考号码'
+          type: an
+        -
+          len: 8
+          tag: T41
+          desc: '终端代码'
+        -
+          len: 15
+          tag: T42
+          desc: '商户代码'
+        -
+          len: 40
+          tag: T43
+          desc: '商户名称、地址'
+        -
+          len: 7
+          tag: T60
+          desc: '报文原因码'
+          type: 'n'
+      
+  rejcde:
+    illegalLen: 10623
+    overLen: 10624
+    illegalVal: 10625
+
+field63:
+  title: 'Finacial Network Data'
+  zh: '金融网络数据'
+  def: ansb...512(LLLVAR)
+  tlv: 2-3-x
+  subfields:
+    -
+      id: SM
+      type: bit
+      desc: 'SM4算法加密的PIN数据'
+    -
+      id: TK
+      tlv: cus-55
+      
   rejcde:
     illegalVal: 
-
