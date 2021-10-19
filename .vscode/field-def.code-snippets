@@ -43,5 +43,13 @@
             "$0",
 		],
 		"description": "field 定义模板"
+	},
+	"Type N Field": {
+		"scope": "yaml,YAML,yml",
+		"prefix": "tpn",
+		"body": [
+			"type: 'n'",
+		],
+		"description": "n类型的field"
 	}
 }

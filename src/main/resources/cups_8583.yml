@@ -1122,3 +1122,161 @@ field63:
       
   rejcde:
     illegalVal: 
+
+field70:
+  title: 'Network Management Information Code'
+  zh: '网络管理信息码'
+  def: n3
+  rejcde:
+    illegalVal: 10705
+
+field90:
+  title: 'Original Data Elements'
+  zh: '原始数据元'
+  def: an42
+  sequence:
+    -
+      len: 4
+      title: 'Original Message Type'
+      desc: '原始报文类型'
+      type: 'n'
+    -
+      len: 6
+      title: 'Original System Trace Number'
+      desc: '原始系统跟踪号'
+      type: 'n'
+    -
+      len: 10
+      title: 'Original System Date Time'
+      desc: '原始系统日期时间'
+      type: 'n'
+    -
+      len: 11
+      title: 'Original Acquirer Institution Identification Code'
+      desc: '原始受理机构标识码'
+      type: an
+    -
+      len: 11
+      title: 'Original Forward Institution Identification Code'
+      desc: '原始发送机构标识码'
+      type: an
+  rejcde:
+    illegalVal: 10905
+
+field96:
+  title: 'Message Security Code'
+  zh: '报文安全码'
+  def: 64bit
+
+field100:
+  title: 'Receiving Institution Identification Code'
+  zh: '接收机构标识码'
+  def: an..11(LLVAR)
+  rejcde:
+    illegalLen: 11003
+    overLen: 11004
+
+field102:
+  title: 'Account Identification 1'
+  zh: '账户标识 1'
+  def: ans..28(LLVAR)
+  rejcde:
+    illegalLen: 11023
+    overLen: 11024
+    illegalVal: 11025
+
+field103:
+  title: 'Account Identification 2'
+  zh: '账户标识 2'
+  def: ans..28(LLVAR)
+  rejcde:
+    illegalLen: 11033
+    overLen: 11034
+    illegalVal: 11035
+
+field104:
+  title: 'Additional Data'
+  zh: '附加信息'
+  def: ansb...512(LLLVAR)
+  tlv: 2-3-x
+  subfields:
+    -
+      id: SI
+      title: 'Sender verification Information'
+      desc: '发送方辅助验证信息'
+      
+    -
+      id: AI
+      title: 'Airline Industry Application Information'
+      desc: '航空行业应用数据'
+    
+    -
+      id: CD
+      title: 'Cardholder Device Information'
+      desc: '持卡人 IP 和设备信息'
+      
+    -
+      id: MU
+      title: 'Money Usage'
+      desc: '资金用途'
+      
+    -
+      id: CC
+      title: 'Company Card Data'
+      desc: '单位结算卡数据'
+      
+    -
+      id: BI
+      title: 'Business and Product Identification'
+      desc: '业务及产品标识'
+      
+    -
+      id: PI
+      title: 'POS Information'
+      desc: '终端信息'
+      
+    -
+      id: EM
+      title: 'Enhanced Merchant Information'
+      desc: '增强型商户信息'
+    
+    -
+      id: AG
+      title: 'Account Grade'
+      desc: '账户类别'
+    
+    -
+      id: SC
+      title: 'Special Clearing Information'
+      desc: '特殊清算信息'
+    
+    -
+      id: RT
+      title: 'Related Transaction Information'
+      desc: '关联交易的主键信息'
+    
+    -
+      id: IV
+      title: 'Identity Verification'
+      desc: '实名认证标识'
+    
+    -
+      id: TR
+      desc: '保留使用'
+    -
+      id: TI
+      desc: '保留使用'
+    -
+      id: TO
+      desc: '保留使用'
+    -
+      id: CP
+      desc: '保留使用'
+    -
+      id: BB
+      desc: '保留使用'
+      
+      
+  rejcde:
+    illegalVal: 
+
