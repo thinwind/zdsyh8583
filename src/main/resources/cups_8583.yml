@@ -1204,11 +1204,82 @@ field104:
       id: SI
       title: 'Sender verification Information'
       desc: '发送方辅助验证信息'
-      
+      subfields:
+        -
+          tag: '01'
+          type: n..19(LLVAR)
+          desc: '发送方账号'
+        -
+          tag: '02'
+          type: ans30
+          desc: '发送方名称'
+        -
+          tag: '03'
+          type: n8
+          desc: '发送方生日'
+        -
+          tag: '04'
+          type: ans1
+          desc: '发送方性别'
+        -
+          tag: '05'
+          type: ans3
+          desc: '发送方所属国籍'
+        -
+          tag: '06'
+          type: ans3
+          desc: '发送方常住地所在的国家'
+        -
+          tag: '07'
+          type: ans..40(LLVAR)
+          desc: '发送方常住地所在的城市'
+        -
+          tag: '08'
+          type: ans..80(LLVAR)
+          desc: '发送方常住街道地址'
+        -
+          tag: '09'
+          type: n1
+          desc: '发送方和接收方是否为同一人标识'
+        -
+          tag: '10'
+          type: n1
+          desc: '汇款资金来源'
+        -
+          tag: '11'
+          type: ans..50(LLVAR)
+          desc: '附加信息(仅境外)'
+        -
+          tag: '12'
+          type: ans..50(LLVAR)
+          desc: '多语言附言(仅境外)'
+        -
+          tag: '13'
+          type: ans..90(LLVAR)
+          desc: '发送方名称(扩展)'
+        -
+          tag: '14'
+          type: ans..40(LLVAR)
+          desc: '发起机构中文简称'
+        -
+          tag: '15'
+          type: ans..32(LLVAR)
+          desc: '发送方账户号'
+        
     -
       id: AI
       title: 'Airline Industry Application Information'
       desc: '航空行业应用数据'
+      subfields:
+        -
+          tag: '01'
+          type: n..19(LLVAR)
+          desc: '发送方账号'
+        -
+          tag: '02'
+          type: ans30
+          desc: '发送方账号'
+        
     
     -
       id: CD
