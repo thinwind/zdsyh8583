@@ -1273,14 +1273,72 @@ field104:
       subfields:
         -
           tag: '01'
-          type: n..19(LLVAR)
-          desc: '发送方账号'
+          type: ans6
+          desc: '航班号'
         -
           tag: '02'
-          type: ans30
-          desc: '发送方账号'
-        
-    
+          type: ans5
+          desc: '飞机号——航段1'
+        -
+          tag: '03'
+          type: ans20
+          desc: '航空公司票号——航段1'
+        -
+          tag: '04'
+          type: n12
+          desc: '基础票价——航段1'
+        -
+          tag: '05'
+          type: an3
+          desc: '基础票价币种——航段1'
+        -
+          tag: '06'
+          type: ans8
+          desc: '航班出发日期——航段1'
+        -
+          tag: '07'
+          type: ans3
+          desc: '起飞城市代码——航段1'
+        -
+          tag: '08'
+          type: ans3
+          desc: '降落城市代码——航段1'
+        -
+          tag: '09'
+          type: ans5
+          desc: '飞机号——航段2'
+        -
+          tag: '10'
+          type: ans20
+          desc: '航空公司票号——航段2'
+        -
+          tag: '11'
+          type: n12
+          desc: '基础票价——航段2'
+        -
+          tag: '12'
+          type: ans3
+          desc: '基础票价币种——航段2'
+        -
+          tag: '13'
+          type: ans8
+          desc: '航班出发日期——航段2'
+        -
+          tag: '14'
+          type: ans3
+          desc: '起飞城市代码——航段2'
+        -
+          tag: '15'
+          type: ans3
+          desc: '降落城市代码——航段2'
+        -
+          tag: '16'
+          type: n14
+          desc: '机上购物系统签到时间——航段1'
+        -
+          tag: '17'
+          type: ans6
+          desc: '操作员工号——航段1'
     -
       id: CD
       title: 'Cardholder Device Information'
