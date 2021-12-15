@@ -1,0 +1,124 @@
+{
+    "version": "1.0",
+    "header":{
+        "enabled": true,
+        "outputKey":"header",
+        "length":46,
+        "components":[
+            {
+                "outputKey": "Field1",
+                "title": {
+                    "en": "Header Length",
+                    "cn": "头长度"
+                },
+                "def": {
+                    "length": 1,
+                    "type": "b"
+                }
+            },
+            {
+                "outputKey": "Field2",
+                "title": {
+                    "en": "Header Flag and Version",
+                    "cn": "头标识和版本号"
+                },
+                "def": {
+                    "length": 1,
+                    "type": "b"
+                }
+            },
+            {
+                "outputKey": "Field3",
+                "title": {
+                    "en": "Total Message Length",
+                    "cn": "报文总长度"
+                },
+                "def": {
+                    "length": 4,
+                    "type": "n",
+                    "valueRange": {
+                        "min": 46,
+                        "max": 1892
+                    }
+                }
+            },
+            {
+                "outputKey": "Field4",
+                "title": {
+                    "en": "Destination Station ID",
+                    "cn": "目的ID"
+                },
+                "def": {
+                    "length": 11,
+                    "type":"ans"
+                }
+            },
+            {
+                "outputKey": "Field5",
+                "title": {
+                    "en": "Source Station ID",
+                    "cn": "源ID"
+                },
+                "def": {
+                    "length": 11,
+                    "type":"ans"
+                }
+            },
+            {
+                "outputKey": "Field6",
+                "title": {
+                    "en": "Reserved for Use",
+                    "cn": "保留使用"
+                },
+                "def": {
+                    "length": 3,
+                    "type":"b"
+                }
+            },
+            {
+                "outputKey": "Field7",
+                "title": {
+                    "en": "Batch Number",
+                    "cn": "批次号"
+                },
+                "def": {
+                    "length": 1,
+                    "type":"b"
+                }
+            },
+            {
+                "outputKey": "Field8",
+                "title": {
+                    "en": "Transaction Information",
+                    "cn": "交易信息"
+                },
+                "def": {
+                    "length": 8,
+                    "type":"ans"
+                }
+            },
+            {
+                "outputKey": "Field9",
+                "title": {
+                    "en": "User Information",
+                    "cn": "用户信息"
+                },
+                "def": {
+                    "length": 1,
+                    "type":"b"
+                }
+            },
+            {
+                "outputKey": "Field10",
+                "title": {
+                    "en": "Reject Code",
+                    "cn": "拒绝码"
+                },
+                "def": {
+                    "length": 5,
+                    "type":"n"
+                }
+            }
+        ]
+    }
+}

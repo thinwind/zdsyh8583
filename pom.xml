@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.deergate</groupId>
-    <artifactId>ful8583</artifactId>
+    <artifactId>zdsyh8583</artifactId>
     <version>1.0.0</version>
 
-    <name>ful8583</name>
+    <name>Zd Syh 8583 Extreme Awsome Tool</name>
     <url>https://github.com/deergate/ful8583</url>
 
     <properties>

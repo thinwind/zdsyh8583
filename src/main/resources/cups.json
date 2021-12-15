@@ -1,0 +1,69 @@
+{
+    "version": "2.1",
+    "header": [
+        {
+            "index": 1,
+            "outKey": "Field1",
+            "title": {
+                "en": "Header Length",
+                "cn": "头长度"
+            },
+            "def": {
+                "length": "1",
+                "type": "b"
+            },
+            "rejectCode": {
+                "illegalVal": "00015"
+            }
+        },
+        {
+            "index": 2,
+            "outKey": "Field2",
+            "title": {
+                "en": "Header Flag and Version",
+                "cn": "头标识和版本号"
+            },
+            "def": {
+                "length": "1",
+                "type": "b"
+            },
+            "rejectCode": {
+                "illegalVal": "00025"
+            }
+        },
+        {
+            "index": 3,
+            "outKey": "Field3",
+            "title": {
+                "en": "Total Message Length",
+                "cn": "报文总长度"
+            },
+            "def": {
+                "length": "4",
+                "type": "n",
+                "range": {
+                    "min": 46,
+                    "max": 1892
+                }
+            },
+            "rejectCode": {
+                "illegalVal": "00035"
+            }
+        },
+        {
+            "index": 4,
+            "outKey": "Field4",
+            "title": {
+                "en": "Destination Station ID",
+                "cn": "目的ID"
+            },
+            "def": {
+                "length": "11",
+                "type":"ans"
+            },
+            "rejectCode": {
+                "illegalVal": "00045"
+            }
+        }
+    ]
+}
