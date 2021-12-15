@@ -1,4 +1,4 @@
-package io.github.deergate.ful8583;
+package io.github.deergate.eat8583;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

@@ -13,30 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.deergate.ful8583;
+package io.github.deergate.eat8583;
 
 /**
  *
- * TODO FieldDefinition说明
+ * TODO Filed说明
  *
  * @author Shang Yehua <niceshang@outlook.com>
- * @since 2021-08-24  17:14
+ * @since 2021-08-26  14:22
  *
  */
-public interface FieldProccessor {
-    /**
-     * 从源报文中解析域
-     * 
-     * @param source 源报文
-     * @param start 要解析的域的起始位置
-     * @return 生成的域
-     */
-    Filed decode(byte[] source,int start);
+public interface Filed {
     
-    /**
-     * 将field编码成byte[]
-     * @param filed 要编码的域
-     * @return 域的byte[]
-     */
-    byte[] encode(Filed filed);
 }

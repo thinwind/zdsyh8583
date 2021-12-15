@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package io.github.deergate.ful8583;
+package io.github.deergate.eat8583;
 
 import java.nio.charset.Charset;
 

@@ -22,6 +22,7 @@ import java.io.UnsupportedEncodingException;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import io.github.deergate.eat8583.BitUtil;
 
 /**
  *
