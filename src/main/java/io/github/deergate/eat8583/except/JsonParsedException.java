@@ -15,40 +15,39 @@
  */
 package io.github.deergate.eat8583.except;
 
-import java.io.IOException;
-
 /**
  *
- * IO通用异常
+ * Json解析处理错误
  *
  * @author Shang Yehua <niceshang@outlook.com>
- * @since 2021-12-16  17:32
+ * @since 2021-12-16  17:36
  *
  */
-public class EatIoException extends IOException {
-    private final static long serialVersionUID = 9527; // ide complains otherwise
+public class JsonParsedException extends EatIoException{
+    
+    private final static long serialVersionUID = 1949; // ide complains otherwise
     
      /**
      * Constructs an {@code EatIoException} with {@code null}
      * as its error detail message.
      */
-    public EatIoException() {
+    public JsonParsedException() {
         super();
     }
 
     /**
-     * Constructs an {@code EatIoException} with the specified detail message.
+     * Constructs an {@code JsonProccessException} with the specified detail message.
      *
      * @param message
      *        The detail message (which is saved for later retrieval
      *        by the {@link #getMessage()} method)
      */
-    public EatIoException(String message) {
+    public JsonParsedException(String message) {
         super(message);
     }
 
     /**
-     * Constructs an {@code EatIoException} with the specified detail message
+     * Constructs an {@code JsonProccessException} with the specified detail message
      * and cause.
      *
      * <p> Note that the detail message associated with {@code cause} is
@@ -66,12 +65,12 @@ public class EatIoException extends IOException {
      *
      * @since 1.6
      */
-    public EatIoException(String message, Throwable cause) {
+    public JsonParsedException(String message, Throwable cause) {
         super(message, cause);
     }
 
     /**
-     * Constructs an {@code EatIoException} with the specified cause and a
+     * Constructs an {@code JsonProccessException} with the specified cause and a
      * detail message of {@code (cause==null ? null : cause.toString())}
      * (which typically contains the class and detail message of {@code cause}).
      * This constructor is useful for IO exceptions that are little more
@@ -84,7 +83,7 @@ public class EatIoException extends IOException {
      *
      * @since 1.6
      */
-    public EatIoException(Throwable cause) {
+    public JsonParsedException(Throwable cause) {
         super(cause);
     }
 }

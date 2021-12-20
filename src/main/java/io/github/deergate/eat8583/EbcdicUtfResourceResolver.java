@@ -3,6 +3,9 @@ package io.github.deergate.eat8583;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import io.github.deergate.eat8583.utils.BitUtil;
+
 import java.util.HashMap;
 import java.util.Map;
 

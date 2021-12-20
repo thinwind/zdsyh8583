@@ -13,16 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.deergate.eat8583.except;
+package io.github.deergate.eat8583.playground;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import io.github.deergate.eat8583.except.JsonParsedException;
+import io.github.deergate.eat8583.utils.JsonUtil;
 
 /**
  *
- * TODO JsonProccessException说明
+ * TODO Playground说明
  *
  * @author Shang Yehua <niceshang@outlook.com>
- * @since 2021-12-16  17:36
+ * @since 2021-12-17  09:59
  *
  */
-public class JsonProccessException {
+public class Playground {
     
+    public static void main(String[] args) throws JsonProcessingException, JsonParsedException {
+        String json = "{\"distance\":\"1609.34\"}";
+        City city = JsonUtil.parseJson(json,City.class);
+        System.out.println(city.getDistance()==Distance.MILE);
+    }
 }

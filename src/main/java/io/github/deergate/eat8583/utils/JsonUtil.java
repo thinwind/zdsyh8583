@@ -16,9 +16,10 @@ package io.github.deergate.eat8583.utils;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+
+import io.github.deergate.eat8583.except.JsonParsedException;
 
 /**
  *
@@ -59,7 +60,12 @@ public class JsonUtil {
         MAPPER.enable(JsonParser.Feature.ALLOW_SINGLE_QUOTES);
     }
     
-    public static <T> T parseJson(String json, Class<T> type) throws JsonMappingException, JsonProcessingException {
-        return MAPPER.readValue(json, type);
+    public static <T> T parseJson(String json, Class<T> type) throws JsonParsedException {
+        try {
+            return MAPPER.readValue(json, type);
+        } catch (JsonProcessingException e) {
+            throw new JsonParsedException(e);
+        }
     }
+    
 }
