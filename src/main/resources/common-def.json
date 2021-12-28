@@ -1,11 +1,12 @@
 {
     "version": "1.0",
-    "header":{
+    "header": {
         "enabled": true,
-        "outputKey":"header",
-        "length":46,
-        "components":[
+        "outputKey": "header",
+        "length": 46,
+        "components": [
             {
+                "index": 1,
                 "outputKey": "Field1",
                 "title": {
                     "en": "Header Length",
@@ -17,6 +18,7 @@
                 }
             },
             {
+                "index": 2,
                 "outputKey": "Field2",
                 "title": {
                     "en": "Header Flag and Version",
@@ -28,6 +30,7 @@
                 }
             },
             {
+                "index": 3,
                 "outputKey": "Field3",
                 "title": {
                     "en": "Total Message Length",
@@ -43,6 +46,7 @@
                 }
             },
             {
+                "index": 4,
                 "outputKey": "Field4",
                 "title": {
                     "en": "Destination Station ID",
@@ -50,10 +54,11 @@
                 },
                 "def": {
                     "length": 11,
-                    "type":"ans"
+                    "type": "ans"
                 }
             },
             {
+                "index": 5,
                 "outputKey": "Field5",
                 "title": {
                     "en": "Source Station ID",
@@ -61,10 +66,11 @@
                 },
                 "def": {
                     "length": 11,
-                    "type":"ans"
+                    "type": "ans"
                 }
             },
             {
+                "index": 6,
                 "outputKey": "Field6",
                 "title": {
                     "en": "Reserved for Use",
@@ -72,10 +78,11 @@
                 },
                 "def": {
                     "length": 3,
-                    "type":"b"
+                    "type": "b"
                 }
             },
             {
+                "index": 7,
                 "outputKey": "Field7",
                 "title": {
                     "en": "Batch Number",
@@ -83,10 +90,11 @@
                 },
                 "def": {
                     "length": 1,
-                    "type":"b"
+                    "type": "b"
                 }
             },
             {
+                "index": 8,
                 "outputKey": "Field8",
                 "title": {
                     "en": "Transaction Information",
@@ -94,10 +102,11 @@
                 },
                 "def": {
                     "length": 8,
-                    "type":"ans"
+                    "type": "ans"
                 }
             },
             {
+                "index": 9,
                 "outputKey": "Field9",
                 "title": {
                     "en": "User Information",
@@ -105,10 +114,11 @@
                 },
                 "def": {
                     "length": 1,
-                    "type":"b"
+                    "type": "b"
                 }
             },
             {
+                "index": 10,
                 "outputKey": "Field10",
                 "title": {
                     "en": "Reject Code",
@@ -116,7 +126,7 @@
                 },
                 "def": {
                     "length": 5,
-                    "type":"n"
+                    "type": "n"
                 }
             }
         ]
