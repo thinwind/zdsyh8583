@@ -1,5 +1,7 @@
 {
     "version": "1.0",
+    "lengthFieldSize":2,
+    "lengthFieldIncluded":true,
     "header": {
         "enabled": true,
         "outputKey": "header",
@@ -8,127 +10,89 @@
             {
                 "index": 1,
                 "outputKey": "Field1",
-                "title": {
-                    "en": "Header Length",
-                    "cn": "头长度"
-                },
-                "def": {
-                    "length": 1,
-                    "type": "b"
-                }
+                "titleEn": "Header Length",
+                "titleZh": "头长度",
+                "length": 1,
+                "type": "b"
             },
             {
                 "index": 2,
                 "outputKey": "Field2",
-                "title": {
-                    "en": "Header Flag and Version",
-                    "cn": "头标识和版本号"
-                },
-                "def": {
-                    "length": 1,
-                    "type": "b"
-                }
+                "titleEn": "Header Flag and Version",
+                "titleCh": "头标识和版本号",
+                "length": 1,
+                "type": "b"
             },
             {
                 "index": 3,
                 "outputKey": "Field3",
-                "title": {
-                    "en": "Total Message Length",
-                    "cn": "报文总长度"
-                },
-                "def": {
-                    "length": 4,
-                    "type": "n",
-                    "valueRange": {
-                        "min": 46,
-                        "max": 1892
-                    }
-                }
+                "titleEn": "Total Message Length",
+                "titleZh": "报文总长度",
+                "length": 4,
+                "type": "n"
             },
             {
                 "index": 4,
                 "outputKey": "Field4",
-                "title": {
-                    "en": "Destination Station ID",
-                    "cn": "目的ID"
-                },
-                "def": {
-                    "length": 11,
-                    "type": "ans"
-                }
+                "titleEn": "Destination Station ID",
+                "titleZh": "目的ID",
+                "length": 11,
+                "type": "ans"
             },
             {
                 "index": 5,
                 "outputKey": "Field5",
-                "title": {
-                    "en": "Source Station ID",
-                    "cn": "源ID"
-                },
-                "def": {
-                    "length": 11,
-                    "type": "ans"
-                }
+                "titleEn": "Source Station ID",
+                "titleZh": "源ID",
+                "length": 11,
+                "type": "ans"
             },
             {
                 "index": 6,
                 "outputKey": "Field6",
-                "title": {
-                    "en": "Reserved for Use",
-                    "cn": "保留使用"
-                },
-                "def": {
-                    "length": 3,
-                    "type": "b"
-                }
+                "titleEn": "Reserved for Use",
+                "titleZh": "保留使用",
+                "length": 3,
+                "type": "b"
             },
             {
                 "index": 7,
                 "outputKey": "Field7",
-                "title": {
-                    "en": "Batch Number",
-                    "cn": "批次号"
-                },
-                "def": {
-                    "length": 1,
-                    "type": "b"
-                }
+                "titleEn": "Batch Number",
+                "titleZh": "批次号",
+                "length": 1,
+                "type": "b"
             },
             {
                 "index": 8,
                 "outputKey": "Field8",
-                "title": {
-                    "en": "Transaction Information",
-                    "cn": "交易信息"
-                },
-                "def": {
-                    "length": 8,
-                    "type": "ans"
-                }
+                "titleEn": "Transaction Information",
+                "titleZh": "交易信息",
+                "length": 8,
+                "type": "ans"
             },
             {
                 "index": 9,
                 "outputKey": "Field9",
-                "title": {
-                    "en": "User Information",
-                    "cn": "用户信息"
-                },
-                "def": {
-                    "length": 1,
-                    "type": "b"
-                }
+                "titleEn": "User Information",
+                "titleZh": "用户信息",
+                "length": 1,
+                "type": "b"
             },
             {
                 "index": 10,
                 "outputKey": "Field10",
-                "title": {
-                    "en": "Reject Code",
-                    "cn": "拒绝码"
-                },
-                "def": {
-                    "length": 5,
-                    "type": "n"
-                }
+                "titleEn": "Reject Code",
+                "titleZh": "拒绝码",
+                "length": 5,
+                "type": "n"
             }
+        ]
+    },
+    "body": {
+        "outputKey":"body",
+        "fields":[
+            
         ]
     }
 }
